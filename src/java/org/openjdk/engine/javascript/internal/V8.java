@@ -1533,7 +1533,7 @@ public final class V8 {
         V8Isolate isolate = currentIsolate.get();
         ClassLoader loader;
         if (isolate != null) {
-	        loader = isolate.getClassLoader();
+            loader = isolate.getClassLoader();
         } else {
             // node case
             loader = ClassLoader.getSystemClassLoader();
