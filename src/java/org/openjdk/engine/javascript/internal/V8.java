@@ -1420,6 +1420,9 @@ public final class V8 {
     }
 
     private static String lookupPropertyImpl(Class<?> cls, String prop, boolean isStatic) {
+        if (! JavaPropertyValidator.isValid(prop)) {
+            throw new IllegalArgumentException("Not a valid Java property: " + prop);
+        }
         V8ClassGenerator generator = new V8ClassGenerator(cls, true);
         if (DEBUG) {
             debugPrintf("Generating script for property %s of class: %s", prop, cls.getName());
