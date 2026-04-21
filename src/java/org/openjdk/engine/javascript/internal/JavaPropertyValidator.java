@@ -61,7 +61,7 @@ final class JavaPropertyValidator {
 
         String[] args = argsPart.split(",");
         for (String arg : args) {
-            if (!isValidTypeName(arg.trim())) {
+            if (!isValidTypeName(arg)) {
                 return false;
             }
         }
@@ -95,7 +95,7 @@ final class JavaPropertyValidator {
 
         // Handle arrays (e.g., int[][])
         while (s.endsWith("[]")) {
-            s = s.substring(0, s.length() - 2).trim();
+            s = s.substring(0, s.length() - 2);
         }
 
         // Handle Qualified Names (e.g., java.lang.String)
