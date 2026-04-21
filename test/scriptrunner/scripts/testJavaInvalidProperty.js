@@ -38,4 +38,7 @@ checkProp(JS, "x-y");
 checkProp(JS, "x**y");
 checkProp(JS, "x  y");
 checkProp(JS, "x\ty");
-
+checkProp(JS, "isEmpty(int [])");
+checkProp(JS, "isEmpty(int\n,float)");
+checkProp(JS, "isEmpty(int\t,float)");
+checkProp(JS, "isEmpty(String, String)");
